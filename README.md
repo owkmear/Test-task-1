@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Test task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Written using `React`,`Redux-thunk`, `Express`.
 
-## Available Scripts
+### Task
 
-In the project directory, you can run:
+Necessary:
+1. Get a list of products from data
+2. Display them as cards: picture, category, name and price
+3. Make filters for products. Filters must be combined with each other. Filters list:
+   * Price - Radio Group with fields 'more than 5000' and 'less than 5000'
+   * Category - Select with fields '1', '2', '3', '4'
+   * Only products in stock - Checkbox
+4. Remove card when user clicked on it
 
-### `yarn start`
+<details>
+  <summary>Products data</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```javascript
+[
+    {
+        id: 1,
+        title: 'Item 1',
+        image: '/50x50.png',
+        quantity: 120,
+        price: 500,
+        category: {
+            id: 1,
+            title: 'Category 1'
+        }
+    },
+    {
+        id: 2,
+        title: 'Item 2',
+        image: '/50x50.png',
+        quantity: 0,
+        price: 7600,
+        category: {
+            id: 2,
+            title: 'Category 2'
+        }
+    },
+    {
+        id: 3,
+        title: 'Item 3',
+        image: '/50x50.png',
+        quantity: 14,
+        price: 3200,
+        category: {
+            id: 1,
+            title: 'Category 1'
+        }
+    },
+    {
+        id: 4,
+        title: 'Item 4',
+        image: '/50x50.png',
+        quantity: 0,
+        price: 700,
+        category: {
+            id: 3,
+            title: 'Category 3'
+        }
+    },
+    {
+        id: 5,
+        title: 'Item 5',
+        image: '/50x50.png',
+        quantity: 40,
+        price: 1900,
+        category: {
+            id: 4,
+            title: 'Category 4'
+        }
+    },
+    {
+        id: 6,
+        title: 'Item 6',
+        image: '/50x50.png',
+        quantity: 22,
+        price: 9999,
+        category: {
+            id: 4,
+            title: 'Category 4'
+        }
+    },
+    {
+        id: 7,
+        title: 'Item 7',
+        image: '/50x50.png',
+        quantity: 0,
+        price: 0,
+        category: {}
+    }
+]
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</details>
 
-### `yarn test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will need the following things properly installed on your computer:
 
-### `yarn build`
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [create-react-app](https://facebook.github.io/create-react-app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* `git clone <repository-url>`
+* `cd Test-task`
+* `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `yarn eject`
+`npm run start-server` command start `Express` server at [http://localhost:4500](http://localhost:4500).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm run start` command start `dev-server` at [http://localhost:3000](http://localhost:3000) with hot reloading.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Building
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run build` command creates build in `\build` folder.
