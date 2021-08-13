@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.storefront {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(3, 200px);
+  margin-bottom: 50px;
+}
+.storefront__card {
+  justify-items: center;
+  display: grid;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: -3px -3px 15px 3px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.storefront__image {
+  width: 50px;
+  height: 50px;
+}
+.storefront__category {
+  margin: 5px 0;
+  color: #777777;
+}
+
+.storefront__name {
+  font-weight: 600;
+  color: #484848;
+}
+
+.storefront__price {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.storefront__error {
+  grid-template-columns: auto;
+  color: #b73131;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.storefront.storefront__empty {
+  grid-template-columns: auto;
+  color: #4c6cc7;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-areas: 'filter' 'storefront';
+}
+
+.wrapper__loading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-template-areas:
+    ". a a ."
+    ". a a .";
+}
+.wrapper__spinner {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px 100px;
+  align-items: center;
+}
+
+.filter__price {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+}
+
+.filter__available {
+  justify-self: center;
+}
+
+.filter__category {
+  justify-self: center;
+}
+
+@media (max-width: 992px) {
+  .storefront {
+    grid-template-columns: repeat(2, 200px);
+  }
+  .filter {
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 100px 100px;
+  }
+  .filter__price {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .storefront {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
