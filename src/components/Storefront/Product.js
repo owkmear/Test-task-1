@@ -12,7 +12,7 @@ class Product extends React.Component {
     const { image, category, title, price, id } = this.props
     return (
       <div onClick={this.handleCLick} className="storefront__card" value={id}>
-        <img className="storefront__image" src="/50x50.png" alt={title} />
+        <img className="storefront__image" src={image} alt={title} />
         <p className="storefront__category">{category.title}</p>
         <p className="storefront__name">{title}</p>
         <p className="storefront__price">{price}</p>

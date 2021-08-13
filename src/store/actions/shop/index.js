@@ -1,7 +1,7 @@
 import { shopSuccess, shopFailure, shopRequest, shopDelete } from './internal'
 import { actionFilterCategoryList } from '../filter/internal'
 
-import { getAllProducts } from '../../../utils/refillHelpers'
+import { getAllProducts } from '../../../api'
 
 export function getProductsList() {
   return (dispatch) => {
